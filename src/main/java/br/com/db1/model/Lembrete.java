@@ -17,10 +17,10 @@ public class Lembrete {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(length = 100, nullable = false, name = "descricao")
+	@Column(length = 100, name = "descricao")
 	private String descricao;
 	
-	@Column(nullable = false, name = "data")
+	@Column( name = "data")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data = new Date();
 

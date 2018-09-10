@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 import br.com.db1.dao.DAO;
 import br.com.db1.model.Lembrete;
 
+
 public class LembreteDao implements DAO<Lembrete>{
 	
 	private EntityManager manager;
@@ -18,8 +19,10 @@ public class LembreteDao implements DAO<Lembrete>{
 	}
 	
 	public String inserir(String descricao){
-		manager.contains(descricao);
+		Lembrete lembrete = new Lembrete();
+		lembrete.setDescricao(descricao);
 		
+		manager.persist(lembrete);
 		return descricao;
 	}
 
